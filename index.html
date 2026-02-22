@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Max Belbin</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Animated background blobs */
+.blob {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle at 30% 30%, #3b82f6, #6366f1);
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.4;
+  animation: float 10s ease-in-out infinite alternate;
+}
+
+.blob2 {
+  top: 40%;
+  left: 60%;
+  background: radial-gradient(circle at 70% 70%, #06b6d4, #3b82f6);
+  animation-duration: 14s;
+}
+
+@keyframes float {
+  from { transform: translateY(-40px) translateX(-20px); }
+  to { transform: translateY(40px) translateX(20px); }
+}
+
+header {
+  padding: 40px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+nav a {
+  color: #cbd5e1;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 400;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: white;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  max-width: 600px;
+  margin: auto;
+}
+
+.section {
+  padding: 80px 10%;
+}
+
+.section h3 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 30px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.project-card h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.project-card p {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+</style>
+</head>
+<body>
+
+<div class="blob"></div>
+<div class="blob blob2"></div>
+
+<header>
+  <h1>Max Belbin</h1>
+  <nav>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Welcome 👋</h2>
+  <p>
+    I build projects, experiment with ideas, and create cool things.
+    This site is where I’ll share everything I’m working on.
+  </p>
+</section>
+
+<section class="section" id="projects">
+  <h3>My Projects</h3>
+  <div class="projects">
+
+    <div class="project-card">
+      <h4>Project One</h4>
+      <p>Short description of your project goes here. Add a link later.</p>
+    </div>
+
+    <div class="project-card">
+      <h4>Project Two</h4>
+      <p>Another placeholder for a future project.</p>
+    </div>
+
+    <div class="project-card">
+      <h4>Coming Soon</h4>
+      <p>More projects will be added here soon.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <h3>Contact</h3>
+  <p style="text-align:center; color:#cbd5e1;">
+    Email coming soon.
+  </p>
+</section>
+
+<footer>
+  © 2026 Max Belbin. All rights reserved.
+</footer>
+
+</body>
+</html>
